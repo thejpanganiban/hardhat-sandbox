@@ -9,11 +9,13 @@ import Expenses from './routes/expenses';
 import Invoice from './routes/invoice';
 import Http404 from './routes/http404';
 import InvoicesIndex from './routes/invoices_index';
+import BoxPage from './routes/box';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
+        <Route path="box" element={<BoxPage />} />
         <Route path="invoices" element={<Invoices />}>
           <Route index element={<InvoicesIndex />} />
           <Route path=":invoiceId" element={<Invoice />} />

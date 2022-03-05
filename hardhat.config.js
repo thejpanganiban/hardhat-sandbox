@@ -19,10 +19,11 @@ module.exports = {
       accounts: [`0x${privateKey}`]
     },
     hardhat: {
-      forking: {
-        url: mainnetUrl,
-        blockNumber: 4043801
-      }
+      chainId: 1337,
+      // forking: {
+      //   url: mainnetUrl,
+      //   blockNumber: 4043801
+      // }
     }
   },
   etherscan: {
