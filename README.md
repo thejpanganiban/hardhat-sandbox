@@ -44,11 +44,11 @@ Recommendation is to keep track of the files.
 
 ### Artifacts Created
 
-Installed Packages: `@openzeppelin/hardhat-upgrades`, `@openzeppelin/contracts-upgradeable`
-Contracts: `Box.sol`, `Box2.sol`
-Tests: `Box.js`, `Box.proxy.js`, `BoxV2.js`, `BoxV2.proxy.js`
-Deployments: `3_deploy_Box.js`, `4_transfer_Box.js`, `5_upgrade_Box_BoxV2.js`
-Network Files: `rinkeby.json`
+- Installed Packages: `@openzeppelin/hardhat-upgrades`, `@openzeppelin/contracts-upgradeable`
+- Contracts: `Box.sol`, `Box2.sol`
+- Tests: `Box.js`, `Box.proxy.js`, `BoxV2.js`, `BoxV2.proxy.js`
+- Deployments: `3_deploy_Box.js`, `4_transfer_Box.js`, `5_upgrade_Box_BoxV2.js`
+- Network Files: `rinkeby.json`
 
 ### Contracts of Interest
 
