@@ -38,7 +38,7 @@ export default function BoxPage() {
     }
 
     return (
-        <main style={{ padding: "1rem" }}>
+        <main>
             <h2>Box Value: {boxValue}</h2>
             <form onSubmit={formOnSubmit}>
                 <input type="number" name="newBoxValue" />
