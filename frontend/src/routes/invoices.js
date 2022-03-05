@@ -16,7 +16,7 @@ export default function Invoices() {
 
     return (
         <div style={{ display: "flex" }}>
-            <nav style= {{ borderRight: "solid 1px", padding: "1rem 1rem 1rem 0" }}>
+            <nav style={{ borderRight: "solid 1px", padding: "1rem 1rem 1rem 0" }}>
                 <input
                     value={searchParams.get("filter") || ""}
                     onChange={searchOnChange}

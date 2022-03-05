@@ -9,16 +9,18 @@ import Invoice from './routes/invoice';
 import Http404 from './routes/http404';
 import InvoicesIndex from './routes/invoices_index';
 import BoxPage from './routes/box';
+import TokenPage from './routes/token';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="box" element={<BoxPage />} />
         <Route path="invoices" element={<Invoices />}>
           <Route index element={<InvoicesIndex />} />
           <Route path=":invoiceId" element={<Invoice />} />
         </Route>
+        <Route path="box" element={<BoxPage />} />
+        <Route path="token" element={<TokenPage />} />
         <Route path="*" element={<Http404 />} />
       </Route>
     </Routes>

@@ -20,7 +20,7 @@ export default function BoxPage() {
             console.log(`ValueChanged(${newValue})`);
             setBoxValue(newValue);
         });
-    }, [boxValue]);
+    }, []);
 
     async function formOnSubmit(event) {
         event.preventDefault();
