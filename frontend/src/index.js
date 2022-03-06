@@ -10,6 +10,7 @@ import Http404 from './routes/http404';
 import InvoicesIndex from './routes/invoices_index';
 import BoxPage from './routes/box';
 import TokenPage from './routes/token';
+import HelloPage from './routes/hello';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ ReactDOM.render(
         </Route>
         <Route path="box" element={<BoxPage />} />
         <Route path="token" element={<TokenPage />} />
+        <Route path="hello" element={<HelloPage />} />
         <Route path="*" element={<Http404 />} />
       </Route>
     </Routes>
