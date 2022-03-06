@@ -45,13 +45,19 @@ export default function TokenPage() {
                 <p>Total Supply: {token.totalSupply}</p>
                 <p>Your Balance: {token.balance}</p>
             </div>
-            <div style={{ paddingLeft: "1rem" }}>
+            <div style={{ borderRight: "solid 1px", padding: "0 1rem 1rem 1rem" }}>
                 <h2>Transfer {token.name}</h2>
                 <form onSubmit={transferOnSubmit}>
                     <p>Wallet: <input type="string" name="to" /></p>
                     <p>Amount: <input type="number" name="amount" /></p>
                     <button>Transfer</button>
                 </form>
+            </div>
+            <div style={{ paddingLeft: "1rem" }}>
+                <h2>Token '{token.name}'</h2>
+                <p>'MyToken' is a super simple pseudo-ERC20 token.</p>
+                <p>You can find the contract in <code>contracts/Token.sol</code></p>
+                <p>Deployment is in </p>
             </div>
         </div>
     )
