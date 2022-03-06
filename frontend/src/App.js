@@ -11,7 +11,8 @@ function App() {
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/hello">Hello</Link> |{" "}
         <Link to="/box">Box</Link> |{" "}
-        <Link to="/token">Token</Link>
+        <Link to="/token">Token</Link> |{" "}
+        <Link to="/network">Network</Link>
       </nav>
       <Outlet/>
     </div>

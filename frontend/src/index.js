@@ -11,6 +11,7 @@ import InvoicesIndex from './routes/invoices_index';
 import BoxPage from './routes/box';
 import TokenPage from './routes/token';
 import HelloPage from './routes/hello';
+import NetworkPage from './routes/network';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -23,6 +24,7 @@ ReactDOM.render(
         <Route path="box" element={<BoxPage />} />
         <Route path="token" element={<TokenPage />} />
         <Route path="hello" element={<HelloPage />} />
+        <Route path="network" element={<NetworkPage />} />
         <Route path="*" element={<Http404 />} />
       </Route>
     </Routes>
