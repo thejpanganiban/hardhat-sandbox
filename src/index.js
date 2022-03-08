@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Hello from './routes/hello';
+import Token from './routes/token';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="hello" element={<Hello />} />
+          <Route path="token" element={<Token />} />
         </Route>
       </Routes>
     </BrowserRouter>

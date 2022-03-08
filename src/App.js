@@ -8,6 +8,7 @@ function App() {
       <h1>Hardhat Sandbox</h1>
       <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
         <Link to="/hello">Hello</Link> |{" "}
+        <Link to="/token">Token</Link> |{" "}
       </nav>
       <Outlet />
     </div>
