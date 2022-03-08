@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div style={{ padding: "1rem" }}>
       <h1>Hardhat Sandbox</h1>
       <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
         <Link to="/invoices">Invoices</Link> |{" "}

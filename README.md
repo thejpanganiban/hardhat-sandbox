@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Hardhat Sandbox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [The Complete Hands-On Hardhat Tutorial](https://betterprogramming.pub/the-complete-hands-on-hardhat-tutorial-9e23728fc8a4)
 
-## Available Scripts
+Started with the leanest project scaffold. Installed a few plugins as they were needed.
 
-In the project directory, you can run:
+### Project 1
 
-### `yarn start`
+Built a pseudo-ERC-20 token. Wrote unit tests. Deployed it on Rinkeby Testnet. Verified the contract Etherscan.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can find the verified contract [here](https://rinkeby.etherscan.io/address/0xf628A56893Dec782485c9FbB8Bfd93A7BeD0192A#code).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Artifacts: `contracts/Token.sol`, `test/token.js`, `deployments/deployToken.js`
 
-### `yarn test`
+### Project 2
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Replicated the infamous "Parity Hack".
 
-### `yarn build`
+Protect functions. Write guards!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Artifacts: `test/parityHack.js`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Project 3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Built a super simple contract for the purpose of deploying it on the local hardhat node. Wrote real client code (ethers.js) that interacts with the local node.
 
-### `yarn eject`
+Artifacts: `contracts/Hello.sol`, `deployments/deployHello.js`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## [OpenZeppelin Upgrades: Step-by-Step Tutorial for Hardhat](https://forum.openzeppelin.com/t/openzeppelin-upgrades-step-by-step-tutorial-for-hardhat/3580)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Followed this guide created by [abcoathup](https://forum.openzeppelin.com/u/abcoathup).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Created a simple contract called `Box`. Deployed it on the Rinkeby network through the hardhat-upgrades extension. Transfered ownership of the contract to a safe in GnosisSafe.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Created a new contract called `BoxV2`. Deployed this contract. Then performed upgrades.
 
-## Learn More
+Unit tests were also created for both v1 and v2. In the BoxV2.proxy.js test, you would find that the state is retained even after the contract is upgraded.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### OpenZeppelin Network Files
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The folder `.openzeppelin` was also created. That folder keeps track of any openzeppelin deployments and proxy associations. They're called [network files](https://docs.openzeppelin.com/upgrades-plugins/1.x/network-files).
 
-### Code Splitting
+Recommendation is to keep track of the files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Artifacts Created
 
-### Analyzing the Bundle Size
+- Installed Packages: `@openzeppelin/hardhat-upgrades`, `@openzeppelin/contracts-upgradeable`
+- Contracts: `Box.sol`, `Box2.sol`
+- Tests: `Box.js`, `Box.proxy.js`, `BoxV2.js`, `BoxV2.proxy.js`
+- Deployments: `3_deploy_Box.js`, `4_transfer_Box.js`, `5_upgrade_Box_BoxV2.js`
+- Network Files: `rinkeby.json`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Contracts of Interest
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Box](https://rinkeby.etherscan.io/address/0x78da2fdcbaad3ac68f2eb7532bed30a1d2d72ec9)
+- [Initial Proxy Contract](https://rinkeby.etherscan.io/address/0xd676D631FeA044A72F7606FEA281EA988efc55e7)
+- [BoxV2](https://rinkeby.etherscan.io/address/0x40CBFdF3BE914C9D879aeC54e9997c1d03bD218b)
