@@ -4,14 +4,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Invoices from './routes/invoices';
+import Hello from './routes/hello';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="invoices" element={<Invoices />} />
+          <Route path="hello" element={<Hello />} />
         </Route>
       </Routes>
     </BrowserRouter>
